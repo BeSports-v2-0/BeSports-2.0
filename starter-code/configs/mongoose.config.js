@@ -4,7 +4,7 @@ const MongoStore = require('connect-mongo')(session)
 
 
 mongoose
-  .connect(`mongodb://localhost/${process.env.DB}`, {
+  .connect(process.env.DB, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
