@@ -17,6 +17,9 @@ nav {
       text-decoration: none;
       text-transform: uppercase; }
 
+.error-message {
+  color: red; }
+
 @keyframes BgGradient {
   0% {
     background-position: 0% 50%; }

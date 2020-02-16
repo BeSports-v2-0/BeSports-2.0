@@ -11,8 +11,8 @@ const bcryptSalt = 10
 router.get("/login", (req, res, next) => {
   res.render("auth/login", {
     "message": req.flash("error")
-  });
-});
+  })
+})
 
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/",
@@ -26,27 +26,43 @@ router.get("/signup", (req, res, next) => {
 })
 
 router.post("/signup", (req, res, next) => {
-  const username = req.body.username;
-  const password = req.body.password;
+
+  const {
+    username,
+    password,
+    confirmPassword,
+    email
+  } = req.body
   if (username === "" && password === "") {
     res.render("auth/signup", {
       message: "Introduzca usuario y contaseña."
-    });
-    return;
+    })
+    return
   }
   if (username === "") {
     res.render("auth/signup", {
-      message: "Introduzca usuario"
+      messageU: "Introduzca usuario"
     })
     return
   }
-  if (password === "") {
+  if (password === "" || confirmPassword === "") {
     res.render("auth/signup", {
-      message: "Introduzca contaseña."
+      messageC: "Introduzca contaseña."
     })
     return
   }
-
+  if (password != confirmPassword) {
+    res.render('auth/signup', {
+      message: 'Las contraseñas no coinciden'
+    })
+    return
+  }
+  if (email === "") {
+    res.render('auth/signup', {
+      messageE: 'Introduzca correo electrónico'
+    })
+    return
+  }
 
   User.findOne({
     username
@@ -54,8 +70,8 @@ router.post("/signup", (req, res, next) => {
     if (user !== null) {
       res.render("auth/signup", {
         message: "El usuario ya existe, porfavor escoja otro."
-      });
-      return;
+      })
+      return
     }
 
     const salt = bcrypt.genSaltSync(bcryptSalt)
@@ -63,24 +79,25 @@ router.post("/signup", (req, res, next) => {
 
     const newUser = new User({
       username,
-      password: hashPass
+      password: hashPass,
+      email
     })
 
     newUser.save()
       .then(() => {
-        res.redirect("/");
+        res.redirect("/")
       })
       .catch(err => {
         res.render("auth/signup", {
           message: "Something went wrong"
-        });
+        })
       })
-  });
-});
+  })
+})
 
 router.get("/logout", (req, res) => {
   req.logout()
   res.redirect("/")
 })
 
-module.exports = router;
+module.exports = router
