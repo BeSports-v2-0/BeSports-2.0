@@ -9,3 +9,5 @@ hbs.registerHelper('ifUndefined', (value, options) => {
     return options.fn(this)
   }
 })
+
+module.exports = hbs

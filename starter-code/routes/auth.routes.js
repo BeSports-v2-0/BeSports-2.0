@@ -11,8 +11,8 @@ const bcryptSalt = 10
 router.get("/login", (req, res, next) => {
   res.render("auth/login", {
     "message": req.flash("error")
-  })
-})
+  });
+});
 
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/",
@@ -26,23 +26,36 @@ router.get("/signup", (req, res, next) => {
 })
 
 router.post("/signup", (req, res, next) => {
-  const username = req.body.username
-  const password = req.body.password
-  if (username === "" || password === "") {
+  const username = req.body.username;
+  const password = req.body.password;
+  if (username === "" && password === "") {
     res.render("auth/signup", {
-      message: "Indicate username and password"
+      message: "Introduzca usuario y contaseña."
+    });
+    return;
+  }
+  if (username === "") {
+    res.render("auth/signup", {
+      message: "Introduzca usuario"
     })
     return
   }
+  if (password === "") {
+    res.render("auth/signup", {
+      message: "Introduzca contaseña."
+    })
+    return
+  }
+
 
   User.findOne({
     username
   }, "username", (err, user) => {
     if (user !== null) {
       res.render("auth/signup", {
-        message: "The username already exists"
-      })
-      return
+        message: "El usuario ya existe, porfavor escoja otro."
+      });
+      return;
     }
 
     const salt = bcrypt.genSaltSync(bcryptSalt)
@@ -55,19 +68,19 @@ router.post("/signup", (req, res, next) => {
 
     newUser.save()
       .then(() => {
-        res.redirect("/")
+        res.redirect("/");
       })
       .catch(err => {
         res.render("auth/signup", {
           message: "Something went wrong"
-        })
+        });
       })
-  })
-})
+  });
+});
 
 router.get("/logout", (req, res) => {
   req.logout()
   res.redirect("/")
 })
 
-module.exports = router
+module.exports = router;

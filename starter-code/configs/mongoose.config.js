@@ -9,7 +9,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  .then(x => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
+  .then(x => console.log(`Conectado a mongo! nombre de la base de datos: "${x.connections[0].name}"`))
   .catch(err => console.error('Está difícil conectarse a la base de datos...', err))
 
 module.exports = app => {
