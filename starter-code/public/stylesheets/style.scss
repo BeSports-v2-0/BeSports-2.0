@@ -1,8 +1,44 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: blue;
 }
 
 a {
   color: #00B7FF;
+}
+
+nav {
+  position: fixed;
+  background: linear-gradient(150deg, white, rgb(199, 198, 198), rgb(77, 77, 77), rgb(77, 77, 77), rgb(199, 198, 198), white);
+  background-size: 400% 300%;
+  animation: BgGradient 5s ease infinite;
+
+  a {
+    margin-right: 20px;
+    color: blue;
+    font-size: 1.2em;
+
+    &:hover {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.error-message {
+  color: red;
+}
+
+
+@keyframes BgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
