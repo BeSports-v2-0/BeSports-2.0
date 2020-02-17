@@ -27,5 +27,22 @@ Una vez entras en tu perfil, puedes ver una foto de ti, así como información t
 * /carreras-> aparece el menu de carreras con una foto y pequeña descripción, junto a dos botones: mas información, y suscribirse(en suscribirse, se te ira a tu perfil y ademas te mandara un correo por google calendar) y un mapa donde aparece el punto de partida.    
 
 ## MODELOS:
-Usuario:
+Usuario: 
+const userSchema = new Schema({
+
+  username: String,
+  email: String,
+  password: String,
+
+  profilePicture: {
+    name: String,
+    path: String
+  }
+}, {
+  timestamps: {
+    createdAt: 'created_at',
+    updatedAt: 'updated_at'
+  }
+})
+
 Evento carreras:
