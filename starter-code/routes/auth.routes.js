@@ -85,15 +85,13 @@ router.post("/signup", (req, res, next) => {
 
     newUser.save()
       .then(() => {
-        res.redirect("/")
+        res.redirect("/");
       })
       .catch(err => {
-        res.render("auth/signup", {
-          message: "Something went wrong"
-        })
+        res.render("auth/signup", { message: "Something went wrong" });
       })
-  })
-})
+  });
+});
 
 router.get("/logout", (req, res) => {
   req.logout()
