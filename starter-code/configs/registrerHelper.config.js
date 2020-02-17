@@ -1,4 +1,5 @@
 const hbs = require('hbs')
+const path = require('path')
 
 hbs.registerHelper('ifUndefined', (value, options) => {
   if (arguments.length < 2)
@@ -9,5 +10,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
     return options.fn(this)
   }
 })
+
+hbs.registerPartials(path.join(__dirname, '..', 'views', 'partials'))
 
 module.exports = hbs

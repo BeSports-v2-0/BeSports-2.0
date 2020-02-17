@@ -2,24 +2,15 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User.model')
 const uploadCloud = require('../configs/cloudinary.config')
-const apiHandle = require("../services/APIHandler")
 
-const api = new apiHandle()
+const isLogged = (req, res, next) => {
+  if (req.isAuthenticated()) return next()
+  return res.redirect('/auth/login')
+}
 
-router.get("/", (req, res, ) => {
-  api.getAllInfo()
-    .then(res => {
-      console.log(res.data)
-      res.render("profile/profile", {
-        user: req.user,
-        apidata: res.data.title
-      })
-
-
-    })
-    .catch(err => console.log(err))
-
-})
+router.get('/', isLogged, (req, res) => res.render('profile/profile', {
+  user: req.user
+}))
 
 router.post('/', uploadCloud.single('phototoupload'), (req, res, next) => {
   const profilePicture = {
@@ -34,9 +25,5 @@ router.post('/', uploadCloud.single('phototoupload'), (req, res, next) => {
     .then(x => res.redirect('/profile'))
     .catch(err => console.log('error con la foto', err))
 })
-
-
-
-
 
 module.exports = router

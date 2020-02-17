@@ -13,7 +13,7 @@ require('./configs/passport')(app)
 app.use('/', require('./routes/index.routes'))
 app.use('/auth', require('./routes/auth.routes'))
 app.use('/profile', require('./routes/profile.routes'))
-app.use('/menu', require('./routes/index.routes'))
+app.use('/home', require('./routes/home.routes'))
 
 
 // app.use('/profile', require('./'))
