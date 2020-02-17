@@ -19,12 +19,12 @@ Una vez entras en tu perfil, puedes ver una foto de ti, así como información t
 /sportcenter| Get    | Ubicación de polideportivos en Madrid
 
 
-/index— — — pagina principal donde encuentras una Presentación  
-/signup— — — formulario de registro 
-/login— — — formulario de inicio de sesión que redirige al menu. 
-/menu— — — puedes selecionar entre ver carreras o polideportivos 
-/profile— — — perfil donde aparece imagen de usuario e información, ademas de las carreras donde se suscrito, y una gráfica de eventos a los que ha asistido a lo largo del año 
-/carreras— — — aparece el menu de carreras con una foto y pequeña descripción, junto a dos botones: mas información, y suscribirse(en suscribirse, se te ira a tu perfil y ademas te mandara un correo por google calendar) y un mapa donde aparece el punto de partida.    
+* /index-> pagina principal donde encuentras una Presentación  
+* /signup-> formulario de registro 
+* /login-> formulario de inicio de sesión que redirige al menu. 
+* /menu-> puedes selecionar entre ver carreras o polideportivos 
+* /profile-> perfil donde aparece imagen de usuario e información, ademas de las carreras donde se suscrito, y una gráfica de eventos a los que ha asistido a lo largo del año 
+* /carreras-> aparece el menu de carreras con una foto y pequeña descripción, junto a dos botones: mas información, y suscribirse(en suscribirse, se te ira a tu perfil y ademas te mandara un correo por google calendar) y un mapa donde aparece el punto de partida.    
 
 ## MODELOS:
 Usuario:
