@@ -28,4 +28,8 @@ nav {
   100% {
     background-position: 0% 50%; } }
 
+.margin-top {
+  margin-top: 100px;
+  padding: 10px; }
+
 /*# sourceMappingURL=style.css.map */

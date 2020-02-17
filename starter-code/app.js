@@ -12,6 +12,9 @@ require('./configs/passport')(app)
 // base url
 app.use('/', require('./routes/index.routes'))
 app.use('/auth', require('./routes/auth.routes'))
+app.use('/menu', require('./routes/index.routes'))
+
+
 // app.use('/profile', require('./'))
 
 

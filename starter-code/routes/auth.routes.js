@@ -92,6 +92,9 @@ router.post("/signup", (req, res, next) => {
       })
   });
 });
+router.get("/profile", (req, res, ) => {
+  res.render("auth/profile")
+})
 
 router.get("/logout", (req, res) => {
   req.logout()
