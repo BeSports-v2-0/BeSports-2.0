@@ -3,7 +3,12 @@ const router = express.Router()
 const User = require('../models/User.model')
 const uploadCloud = require('../configs/cloudinary.config')
 
-router.get("/", (req, res, ) => {
+const isLogged = (req, res, next) => {
+  if (req.isAuthenticated()) return next()
+  return res.redirect('/auth/login')
+}
+
+router.get("/", isLogged, (req, res, ) => {
   res.render("profile/profile", {
     user: req.user
   })

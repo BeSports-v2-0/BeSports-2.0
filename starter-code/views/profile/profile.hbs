@@ -1,17 +1,16 @@
-<h1 class="margin-top"> Bienvenido{{user.username}}</h1>
+<h1 class="margin-top"> Bienvenido {{user.username}}</h1>
 
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-md-6">
             <img src="{{user.profilePicture.path}}"></img>
-        </div>
-        <div class="col-lg-7">
             <form action="/profile" method="post" enctype="multipart/form-data">
                 <input type="file" name="phototoupload"><br>
                 <input type="submit" value="Save"><br>
             </form>
         </div>
+
 
     </div>
 
