@@ -28,6 +28,7 @@ Una vez entras en tu perfil, puedes ver una foto de ti, así como información t
 
 ## MODELOS:
 Usuario: 
+````
 const userSchema = new Schema({
 
   username: String,
@@ -44,5 +45,6 @@ const userSchema = new Schema({
     updatedAt: 'updated_at'
   }
 })
+````
 
 Evento carreras:
