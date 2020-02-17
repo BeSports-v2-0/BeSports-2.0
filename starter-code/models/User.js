@@ -6,11 +6,14 @@ const userSchema = new Schema({
   username: String,
   email: String,
   password: String,
-
   profilePicture: {
     name: String,
     path: String
-  }
+  },
+  favs: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Carrers'
+  }]
 }, {
   timestamps: {
     createdAt: 'created_at',
@@ -20,4 +23,3 @@ const userSchema = new Schema({
 
 const User = mongoose.model('User', userSchema)
 module.exports = User
-
