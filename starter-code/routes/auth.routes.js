@@ -92,7 +92,10 @@ router.post("/signup", (req, res, next) => {
           message: "Something went wrong"
         })
       })
-  })
+  });
+});
+router.get("/profile", (req, res, ) => {
+  res.render("auth/profile")
 })
 
 router.get("/logout", (req, res) => {
