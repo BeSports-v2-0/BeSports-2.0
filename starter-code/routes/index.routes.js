@@ -7,6 +7,7 @@ const isLogged = (req, res, next) => {
   return res.redirect('/auth/login')
 }
 
+
 router.get('/', isLogged, (req, res, next) => res.render('index'))
 
 
