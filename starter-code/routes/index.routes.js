@@ -8,7 +8,7 @@ const isLogged = (req, res, next) => {
 }
 
 
-router.get('/', isLogged, (req, res, next) => res.render('index'))
+router.get('/', (req, res, next) => res.render('index'))
 
 
 
