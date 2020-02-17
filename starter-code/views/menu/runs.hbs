@@ -1,5 +1,15 @@
 <h1>estos son los eventos disponibles.</h1>
 
-<p>{{user.email}}</p>
-<p>{{ apidata.0.title  }}</p>
-{{!-- Con esto accedo al primer objeto y su title --}}
+<div class="container">
+  <h1>Carreras</h1>
+
+  <div class="row">
+
+    {{#each runs}}
+
+    {{>runCard this}}
+
+    {{/each}}
+
+  </div>
+</div>

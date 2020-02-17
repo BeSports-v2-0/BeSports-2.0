@@ -1,11 +1,12 @@
-<div class="col-md-3">
-  <div class="card player">
-    <img class="card-img-top" src="{{photo}}" alt="{{name}} {{lastName}}">
-    <div class="card-body">
-      <h4>{{name}}</h4>
-      <p class="card-text">{{name}} {{lastName}}</p>
+<div class="col-md-4">
+  <div class="">
+    <img class="" src="{{photo}}" alt="{{name}} {{lastName}}">
+    <div class="">
+      <h4>{{this.title}}</h4>
+      <p class="card-text">{{this.dtstart}}</p>
+      <p>Más información <a target="_blank" href="{{this.link}}">aquí</a> </p>
+      <p>{{this.organization.organization-name}}</p>
       <hr>
-      <small>Equipo: {{team}}</small>
     </div>
   </div>
 </div>

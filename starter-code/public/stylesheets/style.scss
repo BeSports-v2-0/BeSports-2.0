@@ -3,14 +3,12 @@ body {
   background-image: url('../images/Sports.png');
 }
 
-.img-logotipo {
-
-  margin: 50px 0;
-}
 
 .img-logotipo {
   height: 150px;
   width: 50%;
+  margin: 50px 0;
+
 }
 
 .row {
@@ -31,7 +29,6 @@ body {
 }
 
 nav {
-  position: fixed;
   background: linear-gradient(150deg, white, rgb(199, 198, 198), rgb(77, 77, 77), rgb(77, 77, 77), rgb(199, 198, 198), white);
   background-size: 400% 300%;
   animation: BgGradient 5s ease infinite;
@@ -79,9 +76,6 @@ a:hover {
   color: rgb(68, 68, 170);
 }
 
-nav {
-  margin-bottom: 50px;
-}
 
 
 h1 {
@@ -102,23 +96,6 @@ h2 {
   margin-top: 35px;
 }
 
-p.text-center {
-  color: crimson;
-  font-size: 2.5em;
-}
-
-.names {
-  font-size: 1.5em;
-  color: blue;
-}
-
-li.margin-bottom {
-  margin-bottom: 20px;
-}
-
-.names:hover {
-  color: red;
-}
 
 h2.margin-left {
   margin-left: 50px;
@@ -128,10 +105,6 @@ h3 {
   font-size: 3.5em;
   color: blue;
   margin-bottom: 20px;
-}
-
-.text-center.margin-bottom {
-  margin-bottom: 50px;
 }
 
 label {
