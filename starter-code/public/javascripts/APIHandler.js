@@ -1,3 +1,7 @@
+
+
+
+
 class APIHandler {
   constructor() {
 
@@ -8,7 +12,7 @@ class APIHandler {
 
   getAllInfo() {
     return this.axiosApp.get("egob/catalogo/300261-0-agenda-proximas-carreras.json")
-      .then()
+      .then(console.log(this.getAllInfo))
 
   }
 
