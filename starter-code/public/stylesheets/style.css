@@ -74,4 +74,8 @@ label {
   font-size: 2em;
   color: blue; }
 
+#map {
+  height: 700px;
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */

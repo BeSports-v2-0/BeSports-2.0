@@ -15,7 +15,7 @@ router.get('/', (req, res, next) => res.render('index'))
 
 
 
-// router.get("/runs", isLogged, (req, res, ) => {
-//   res.render("menu/runs")
-// })
+router.get("/sportcenter", isLogged, (req, res, ) => {
+  res.render("menu/sportcenter")
+})
 module.exports = router
