@@ -1,0 +1,36 @@
+<h1>Crea tu propia carrera</h1>
+<div class="container">
+
+  <form action="/home/new" method="POST" id="form-container">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp"
+        placeholder="Carrera internacional contra el console.log()">
+    </div>
+    <div class="form-group">
+      <label for="dtstart">Fecha y hora de inicio</label>
+      <input type="text" name="dtstart" class="form-control" id="dtstart" aria-describedby="emailHelp"
+        placeholder="01/01/2099 a las 23:55">
+    </div>
+    <div class="form-group">
+      <label for="dtend">Fecha y hora de finalización</label>
+      <input type="text" name="dtend" class="form-control" id="dtend" aria-describedby="emailHelp"
+        placeholder="01/01/2099 a las 00:00">
+    </div>
+    <div class="form-group">
+      <label for="cost">Precio</label>
+      <input type="text" name="cost" class="form-control" id="cost" aria-describedby="emailHelp"
+        placeholder="Gratiiiiiiiiiiiiiiiiiiiiiiiiis">
+    </div>
+    <div class="form-group">
+      <label for="local">Localización</label>
+      <input type="text" name="local" class="form-control" id="local" aria-describedby="emailHelp"
+        placeholder="La Cañada Real">
+    </div>
+
+    <button class="btn btn-primary">Crea la carrera</button>
+  </form>
+  <div class="text-center margin-top">
+    <a class="btn btn-dark " href="/home"> Volver atrás</a>
+  </div>
+</div>
