@@ -23,6 +23,3 @@ app.use('/home', require('./routes/home.routes'))
 
 
 module.exports = app
-
-
-// mision: dejar app en una o dos lienas, nos garantizamods el 8 xd
