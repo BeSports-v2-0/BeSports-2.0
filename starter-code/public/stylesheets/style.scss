@@ -64,15 +64,12 @@ nav {
 }
 
 
-a:hover {
-  text-decoration: none;
-  color: rgb(68, 68, 170);
-}
-
 h1 {
-  margin: 50px;
+  margin-bottom: 40px;
+  color: chocolate;
   font-size: 5em;
-  color: silver;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 h2 {
@@ -88,14 +85,21 @@ h2 {
 }
 
 
-h2.margin-left {
-  margin-left: 50px;
+h3 {
+  font-size: 1.9em;
+  color: blue;
+  padding-top: 20px;
 }
 
-h3 {
-  font-size: 3.5em;
-  color: blue;
-  margin-bottom: 20px;
+#randomSentence {
+  color: #efb810;
+  font-size: medium;
+  margin-bottom: 30px;
+  font-style: italic;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h4 {
@@ -109,4 +113,34 @@ label {
 #map {
 	height: 700px;
  width: 100%;
+}
+.card {
+  height: 280px;
+  margin: 20px 0;
+  padding: 10px;
+
+  &:hover {
+    background-color: red;
+  }
+
+  .info-card {
+    color: black;
+    font-size: 0.8em;
+  }
+
+  a {
+    color: purple;
+
+    &:hover {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+
+  }
+
+  li {
+    list-style: upper-roman;
+  }
+
 }

@@ -40,14 +40,12 @@ nav {
   100% {
     background-position: 0% 50%; } }
 
-a:hover {
-  text-decoration: none;
-  color: #4444aa; }
-
 h1 {
-  margin: 50px;
+  margin-bottom: 40px;
+  color: chocolate;
   font-size: 5em;
-  color: silver; }
+  margin-left: 30px;
+  margin-top: 30px; }
 
 h2 {
   margin-bottom: 40px;
@@ -59,13 +57,18 @@ h2 {
 .margin-top {
   margin-top: 35px; }
 
-h2.margin-left {
-  margin-left: 50px; }
-
 h3 {
-  font-size: 3.5em;
+  font-size: 1.9em;
   color: blue;
-  margin-bottom: 20px; }
+  padding-top: 20px; }
+
+#randomSentence {
+  color: #efb810;
+  font-size: medium;
+  margin-bottom: 30px;
+  font-style: italic; }
+  #randomSentence:hover {
+    text-decoration: underline; }
 
 h4 {
   color: blue; }
@@ -74,8 +77,27 @@ label {
   font-size: 2em;
   color: blue; }
 
+<<<<<<< HEAD
 #map {
   height: 700px;
   width: 100%; }
+=======
+.card {
+  height: 280px;
+  margin: 20px 0;
+  padding: 10px; }
+  .card:hover {
+    background-color: red; }
+  .card .info-card {
+    color: black;
+    font-size: 0.8em; }
+  .card a {
+    color: purple; }
+    .card a:hover {
+      text-decoration: none;
+      text-transform: uppercase; }
+  .card li {
+    list-style: upper-roman; }
+>>>>>>> 7ab3fb11fe4697009dcc8644a0b61a1df9429522
 
 /*# sourceMappingURL=style.css.map */
