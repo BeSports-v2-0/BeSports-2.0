@@ -40,10 +40,6 @@ nav {
   100% {
     background-position: 0% 50%; } }
 
-a:hover {
-  text-decoration: none;
-  color: #4444aa; }
-
 h1 {
   margin-bottom: 40px;
   color: chocolate;
@@ -71,6 +67,8 @@ h3 {
   font-size: medium;
   margin-bottom: 30px;
   font-style: italic; }
+  #randomSentence:hover {
+    text-decoration: underline; }
 
 h4 {
   color: blue; }
@@ -83,8 +81,17 @@ label {
   height: 280px;
   margin: 20px 0;
   padding: 10px; }
+  .card:hover {
+    background-color: red; }
   .card .info-card {
     color: black;
     font-size: 0.8em; }
+  .card a {
+    color: purple; }
+    .card a:hover {
+      text-decoration: none;
+      text-transform: uppercase; }
+  .card li {
+    list-style: upper-roman; }
 
 /*# sourceMappingURL=style.css.map */

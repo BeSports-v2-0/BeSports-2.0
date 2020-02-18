@@ -30,6 +30,19 @@
           <p class="info-p">Más información <a target="_blank" href="{{link}}">aquí</a> </p>
         </li>
         {{/if}}
+        {{#if owner}}
+        <li>
+          <p class="info-p">Creador: {{owner.username}}</p>
+
+        </li>
+        {{/if}}
+        {{#if owner}}
+        <li>
+          <p class="info-p">E-mail: {{owner.email}}</p>
+        </li>
+        {{/if}}
+
+
       </ul>
     </div>
   </div>

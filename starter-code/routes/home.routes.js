@@ -14,7 +14,7 @@ const isLogged = (req, res, next) => {
 
 router.get("/", (req, res) => {
   const apiPromise = api.getAllInfo()
-  const runsPromise = Run.find()
+  const runsPromise = Run.find().populate('owner')
   Promise.all([apiPromise, runsPromise])
     .then(results => {
       console.log(results[0].data['@graph'])
@@ -49,6 +49,7 @@ router.post('/new', (req, res, next) => {
       local,
       owner: owner
     })
+
     .then(() => res.redirect('/home'))
     .catch(err => console.log("ha salido mal", err))
 })
