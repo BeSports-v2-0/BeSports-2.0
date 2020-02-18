@@ -81,9 +81,9 @@ label {
   height: 280px;
   margin: 20px 0;
   padding: 10px;
-  transition: 0.5s all ease-in; }
+  transition: 0.4s all ease-in; }
   .card:hover {
-    background-color: red; }
+    background: green; }
   .card .info-card {
     color: black;
     font-size: 0.8em; }
