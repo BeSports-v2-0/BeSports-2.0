@@ -12,7 +12,7 @@ const isLogged = (req, res, next) => {
   return res.redirect('/auth/login')
 }
 
-router.get("/", (req, res) => {
+router.get("/", isLogged, (req, res) => {
   const apiPromise = api.getAllInfo()
   const runsPromise = Run.find().populate('owner')
   Promise.all([apiPromise, runsPromise])
@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
       console.log(typeof (allRuns.runsApi))
       res.render("menu/runs", allRuns)
     })
-    .catch(err => console.log(err))
+    .catch(err => next(new Error(err)))
 })
 
 router.get('/new', isLogged, (req, res) => {
@@ -51,7 +51,7 @@ router.post('/new', (req, res, next) => {
     })
 
     .then(() => res.redirect('/home'))
-    .catch(err => console.log("ha salido mal", err))
+    .catch(err => next(new Error(err)))
 })
 
 
