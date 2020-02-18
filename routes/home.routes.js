@@ -22,8 +22,6 @@ router.get("/", isLogged, (req, res) => {
         runsApi: results[0].data['@graph'],
         runsDB: results[1]
       }
-      console.log(allRuns)
-      console.log(typeof (allRuns.runsApi))
       res.render("menu/runs", allRuns)
     })
     .catch(err => next(new Error(err)))

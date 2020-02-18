@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    iniciarMap(),
-        showmarker()
+    // iniciarMap(),
+    //     showmarker()
 
     // function iniciarMap() {
     //     console.log("holaaaa")
@@ -35,5 +35,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 }, false)
-
-

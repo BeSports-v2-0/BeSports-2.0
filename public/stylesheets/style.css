@@ -125,4 +125,8 @@ label {
   to {
     transform: none; } }
 
+#placesMap {
+  width: 100%;
+  height: 300px; }
+
 /*# sourceMappingURL=style.css.map */
