@@ -1,12 +1,16 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const carrersSchema = new Schema({
+const runsSchema = new Schema({
     title: String,
     dtstart: String,
     dtend: String,
-    link: String,
-    "event-location": String
+    cost: String,
+    local: String,
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 })
 
-module.exports = mongoose.model('Carrers', carrersSchema)
+module.exports = mongoose.model('Runs', runsSchema)

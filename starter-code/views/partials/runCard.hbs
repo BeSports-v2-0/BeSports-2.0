@@ -1,14 +1,36 @@
 <div class="col-md-4">
   <div class="card">
-    <img class="" src="{{photo}}" alt="{{name}} {{lastName}}">
-    <div class="">
-      <h4>{{this.title}}</h4>
-      <p class=""> Fecha y hora de inicio: {{this.dtstart}}</p>
-      <p class=""> Fecha y hora de fin: {{this.dtend}}</p>
-
-      <p>{{this.organization.organization-name}}</p>
-      <p>Más información <a target="_blank" href="{{this.link}}">aquí</a> </p>
+    <h3>{{title}}</h3>
+    <div class="info-card">
       <hr>
+      <ul>
+        <li>
+          <p class="info-p">Fecha y hora de inicio: {{dtstart}}</p>
+        </li>
+        <li>
+          <p class="info-p">Fecha y hora de finalizacion: {{dtend}}</p>
+        </li>
+        {{#if local}}
+        <li>
+          <p class="info-p">Lugar: {{local}}</p>
+        </li>
+        {{/if}}
+        {{#if organization.organization-name}}
+        <li>
+          <p class="info-p">Lugar: {{organization.organization-name}}</p>
+        </li>
+        {{/if}}
+        {{#if cost}}
+        <li>
+          <p class="info-p">Coste: {{cost}}</p>
+        </li>
+        {{/if}}
+        {{#if link}}
+        <li>
+          <p class="info-p">Más información <a target="_blank" href="{{link}}">aquí</a> </p>
+        </li>
+        {{/if}}
+      </ul>
     </div>
   </div>
 </div>
