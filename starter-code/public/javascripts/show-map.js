@@ -1,6 +1,6 @@
 
 
-const axios = require("axios")
+//const axios = require("axios")
 
 
 function iniciarMap() {
@@ -12,7 +12,7 @@ function iniciarMap() {
     });
 
     let marker = new google.maps.Marker({
-        position: coord, //showmarker.data(['@graph'.references.location]),
+        position: showmarker.data(['@graph'[2].references.location]),
         map: map
     });
 
@@ -20,7 +20,7 @@ function iniciarMap() {
 
 function showmarker() {
     return axios.get("https://datos.madrid.es/egob/catalogo/300261-0-agenda-proximas-carreras.json")
-    console.log(showmarker)
+
 }
 
 
