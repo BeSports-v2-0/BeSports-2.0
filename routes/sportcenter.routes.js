@@ -10,9 +10,18 @@ const isLogged = (req, res, next) => {
 }
 
 router.get("/", isLogged, (req, res, ) => {
-  api.getAllPolis()
-    .then(info => console.log("1"))
   res.render("menu/sportcenter")
+})
+
+// Api para maps
+router.get('/api', (req, res, next) => {
+  const a = api.getAllPolis()
+
+    .then(allPolis => {
+      console.log(allPolis)
+      res.json(allPolis.data['@graph'])
+    })
+    .catch(err => next(err))
 })
 
 module.exports = router

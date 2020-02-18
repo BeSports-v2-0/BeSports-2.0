@@ -7,8 +7,9 @@ let initialCoords = {
 function initMap() {
   let mapOptions = {
     center: initialCoords,
-    zoom: 10
+    zoom: 12
   }
+
   myMap = new google.maps.Map(document.querySelector('#placesMap'), mapOptions)
   getPlaces()
 }
@@ -16,11 +17,9 @@ function initMap() {
 
 function getPlaces() {
 
-  axios.get('https://datos.madrid.es/egob/catalogo/200186-0-polideportivos.json')
+  axios.get('/sportcenter/api')
     .then(response => {
-      console.log(response)
-      const allPlaces = response.data['@graph']
-      console.log('el array de places es:', allPlaces)
+      const allPlaces = response.data
       placePlacesInMap(allPlaces)
     })
     .catch(error => console.log(error))

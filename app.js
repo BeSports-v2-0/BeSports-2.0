@@ -10,7 +10,6 @@ require('./configs/locals.config')(app)
 require('./configs/passport')(app)
 require('./configs/debugger.config')
 require('./configs/registrerHelper.config')
-require('./public/javascripts/show-map')
 //----------------------------------------------------------------------
 // base url
 app.use('/', require('./routes/index.routes'))
