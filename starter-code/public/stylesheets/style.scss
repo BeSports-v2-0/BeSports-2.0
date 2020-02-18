@@ -25,7 +25,6 @@ body {
 
 .col-md-12 {
   margin: 50px auto;
-
 }
 
 nav {
@@ -50,7 +49,6 @@ nav {
 }
 
 
-
 @keyframes BgGradient {
   0% {
     background-position: 0% 50%;
@@ -66,17 +64,10 @@ nav {
 }
 
 
-
-ul {
-  list-style: upper-roman;
-}
-
 a:hover {
   text-decoration: none;
   color: rgb(68, 68, 170);
 }
-
-
 
 h1 {
   margin: 50px;
@@ -105,6 +96,10 @@ h3 {
   font-size: 3.5em;
   color: blue;
   margin-bottom: 20px;
+}
+
+h4 {
+  color: blue;
 }
 
 label {

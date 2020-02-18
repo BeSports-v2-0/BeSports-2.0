@@ -3,10 +3,14 @@ const router = express.Router()
 const path = require('path')
 
 const apiHandle = require("../services/APIHandler")
-
 const api = new apiHandle()
 
-router.get("/", (req, res) => {
+const isLogged = (req, res, next) => {
+  if (req.isAuthenticated()) return next()
+  return res.redirect('/auth/login')
+}
+
+router.get("/", isLogged, (req, res) => {
   api.getAllInfo()
     .then(response => {
       res.render("menu/runs", {

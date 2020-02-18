@@ -1,11 +1,13 @@
 <div class="col-md-4">
-  <div class="">
+  <div class="card">
     <img class="" src="{{photo}}" alt="{{name}} {{lastName}}">
     <div class="">
       <h4>{{this.title}}</h4>
-      <p class="card-text">{{this.dtstart}}</p>
-      <p>Más información <a target="_blank" href="{{this.link}}">aquí</a> </p>
+      <p class=""> Fecha y hora de inicio: {{this.dtstart}}</p>
+      <p class=""> Fecha y hora de fin: {{this.dtend}}</p>
+
       <p>{{this.organization.organization-name}}</p>
+      <p>Más información <a target="_blank" href="{{this.link}}">aquí</a> </p>
       <hr>
     </div>
   </div>

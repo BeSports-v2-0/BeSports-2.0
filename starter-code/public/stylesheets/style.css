@@ -40,9 +40,6 @@ nav {
   100% {
     background-position: 0% 50%; } }
 
-ul {
-  list-style: upper-roman; }
-
 a:hover {
   text-decoration: none;
   color: #4444aa; }
@@ -69,6 +66,9 @@ h3 {
   font-size: 3.5em;
   color: blue;
   margin-bottom: 20px; }
+
+h4 {
+  color: blue; }
 
 label {
   font-size: 2em;
