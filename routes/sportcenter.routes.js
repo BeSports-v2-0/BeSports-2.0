@@ -10,7 +10,15 @@ const isLogged = (req, res, next) => {
 }
 
 router.get("/", isLogged, (req, res, ) => {
-  res.render("menu/sportcenter")
+  api.getAllPolis()
+    .then(allPolis => {
+      const polisInfo = allPolis.data['@graph']
+      console.log(polisInfo)
+      res.render("menu/sportcenter", {
+        polisInfo
+      })
+    })
+
 })
 
 // Api para maps

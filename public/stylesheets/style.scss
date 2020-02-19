@@ -119,13 +119,15 @@ label {
 }
 
 .card {
-  height: 290px;
+  height: auto;
   margin: 20px 0;
   padding: 10px;
   transition: 0.4s all ease-in;
 
   &:hover {
-    background: rgb(160, 160, 160);
+    background: rgba(156, 71, 135, 0.486);
+    box-shadow: 0px 8px 4px 0px rgba(79, 31, 79, 1);
+    transform: translateY(-8px);
   }
 
   .info-card {
@@ -155,7 +157,6 @@ label {
   height: 5px;
   width: 20px;
   margin-left: 40px;
-  
   color: rgb(16, 68, 163);
   border-radius: 3px;
 
@@ -189,68 +190,113 @@ label {
 }
 
 #placesMap {
-  width: 100%;
-<<<<<<< HEAD
-  height: 300px;
+  width: 80%;
+  height: 400px;
+  margin: 20px 0;
+  border: 1px solid grey;
+  transition: all 1s ease-in-out;
+
+  &:hover {
+    border: 1px solid yellow;
+    transform: scale(1.1);
+  }
 }
-.favorite{
+
+figure {
+  left: 100px;
+}
+
+.favorite {
   font-size: 12px;
 }
+
 #lista5 {
-    counter-reset: li; 
-    list-style: none; 
-    *list-style: decimal; 
-    font: 15px 'trebuchet MS', 'lucida sans';
-    padding: 0;
-    margin-bottom: 4em;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  counter-reset: li;
+  list-style: none;
+  *list-style: decimal;
+  font: 15px 'trebuchet MS', 'lucida sans';
+  padding: 0;
+  margin-bottom: 4em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
 }
 
 #lista5 ol {
-    margin: 0 0 0 2em; 
+  margin: 0 0 0 2em;
 }
 
 #lista5 {
-    list-style-type: none;
-    list-style-type: decimal ; 
-     
-    margin: 0;  
-    margin-left: 1em;
-    padding: 0;
-     
-    counter-reset: li-counter;
+  list-style-type: none;
+  list-style-type: decimal;
+
+  margin: 0;
+  margin-left: 1em;
+  padding: 0;
+
+  counter-reset: li-counter;
 }
 
-#lista5 > li{
-    position: relative;
-    margin-bottom: 1.5em;
-    padding: 1.5em;
-    background-color: #eaeaea;
+#lista5>li {
+  position: relative;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  background-color: #eaeaea;
 }
 
-#lista5 > li:before {
-    position: absolute;
-    top: -0.3em;
-    left: -0.5em;
-    width: 1.8em;
-    height: 1.2em;
-     
-    font-size: 2em;
-    line-height: 1.2;
-    font-weight: bold;
-    text-align: center;
-    color: #464646;
-    background-color: #d0d0d0;
-     
-    transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    -webkit-transform: rotate(-20deg);
-    z-index: 99;
-    overflow: hidden;
-     
-    content: counter(li-counter);
-    counter-increment: li-counter;
-=======
+#lista5>li:before {
+  position: absolute;
+  top: -0.3em;
+  left: -0.5em;
+  width: 1.8em;
+  height: 1.2em;
+
+  font-size: 2em;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+  color: #464646;
+  background-color: #d0d0d0;
+
+  transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  z-index: 99;
+  overflow: hidden;
+
+  content: counter(li-counter);
+  counter-increment: li-counter;
   height: 400px;
->>>>>>> 0e8c676837fa8aa93dc9f29535d3a4d535b6cad3
 }
+
+/* Underline From Center */
+.underline {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.underline:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+
+}
+
+.underline:hover:before,
+.underline:focus:before,
+.underline:active:before {
+  left: 0;
+  right: 0;
+}
+
+/*end underline */
