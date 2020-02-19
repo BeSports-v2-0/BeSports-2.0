@@ -1,11 +1,12 @@
+let currentPosition = {}
 let initialCoords = {
     lat: 40.393436,
     lng: -3.698019
   },
   myMap
 
-
 function initMap() {
+
   let mapOptions = {
     center: initialCoords,
     zoom: 12,
@@ -19,7 +20,7 @@ function initMap() {
 
     navigator.geolocation.getCurrentPosition(position => {
 
-      const currentPosition = {
+      currentPosition = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       }
@@ -48,17 +49,16 @@ function initMap() {
 
 }
 
-
 function getPlaces() {
 
   axios.get('/sportcenter/api')
     .then(response => {
       const allPlaces = response.data
       placePlacesInMap(allPlaces)
+
     })
     .catch(error => console.log(error))
 }
-
 
 function placePlacesInMap(places) {
 
@@ -78,6 +78,7 @@ function placePlacesInMap(places) {
     icon: iconGod,
     animation: google.maps.Animation.BOUNCE
   })
+
   places.forEach(place => {
 
     const center = {
@@ -87,17 +88,60 @@ function placePlacesInMap(places) {
 
     function toggleBounce() {
       if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
+        marker.setAnimation(null)
+
       } else {
         marker.setAnimation(google.maps.Animation.BOUNCE)
       }
     }
+
+
+    function setRoute() {
+
+      let directionsService = new google.maps.DirectionsService
+
+      let directionsDisplay = new google.maps.DirectionsRenderer
+
+      const directionRequest = {
+        origin: currentPosition,
+        destination: marker.title,
+        travelMode: 'WALKING'
+      }
+      directionsService.route(
+        directionRequest,
+        (response, status) => {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response)
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        }
+      )
+
+      directionsDisplay.setMap(myMap)
+
+      setTimeout(() => directionsDisplay.setMap(null), 3000)
+    }
+
+    var contentString = `<h1 class="Tiendaname">${place.title}</h1>
+    <p class="ranking">Rating:</p>
+    <p class="Tienda">Open:</p>
+    <p class="Tienda">Close:</p>
+    <p class="ir"></p>`
+
+    let infowindow = new google.maps.InfoWindow({
+      content: contentString
+    })
+
+
+
     const icon = {
       url: '../images/mark.png',
       scaledSize: new google.maps.Size(30, 35),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0, 32)
     }
+
     let marker = new google.maps.Marker({
       title: place.title,
       position: center,
@@ -105,7 +149,10 @@ function placePlacesInMap(places) {
       icon: icon,
       animation: google.maps.Animation.DROP
     })
+
     marker.addListener('click', toggleBounce)
+    marker.addListener('click', setRoute)
+    marker.addListener('click', () => infowindow.open(myMap, marker))
   })
 
 }
