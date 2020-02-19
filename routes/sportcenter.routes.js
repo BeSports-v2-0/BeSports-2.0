@@ -15,10 +15,8 @@ router.get("/", isLogged, (req, res, ) => {
 
 // Api para maps
 router.get('/api', (req, res, next) => {
-  const a = api.getAllPolis()
-
+  api.getAllPolis()
     .then(allPolis => {
-      console.log(allPolis)
       res.json(allPolis.data['@graph'])
     })
     .catch(err => next(err))

@@ -190,6 +190,7 @@ label {
 
 #placesMap {
   width: 100%;
+<<<<<<< HEAD
   height: 300px;
 }
 .favorite{
@@ -249,4 +250,7 @@ label {
      
     content: counter(li-counter);
     counter-increment: li-counter;
+=======
+  height: 400px;
+>>>>>>> 0e8c676837fa8aa93dc9f29535d3a4d535b6cad3
 }
