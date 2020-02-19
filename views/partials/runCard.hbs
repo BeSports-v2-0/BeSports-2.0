@@ -33,7 +33,6 @@
         {{#if owner}}
         <li>
           <p class="info-p">Creador: {{owner.username}}</p>
-
         </li>
         {{/if}}
         {{#if owner}}
@@ -42,7 +41,12 @@
         </li>
         {{/if}}
 
-
+        <li>
+          {{!-- <form action="/home/api" method="post" name="favorite"> --}}
+          Añadir a favoritos-> <input type="submit" name="{{id}}" value="Enviar" placeholder="Enviar"
+            class="info-input">
+          {{!-- </form> --}}
+        </li>
       </ul>
     </div>
   </div>

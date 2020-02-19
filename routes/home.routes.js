@@ -40,17 +40,37 @@ router.post('/new', (req, res, next) => {
     local
   } = req.body
   Run.create({
-      title,
-      dtstart,
-      dtend,
-      cost,
-      local,
-      owner: owner
-    })
+    title,
+    dtstart,
+    dtend,
+    cost,
+    local,
+    owner: owner
+  })
 
     .then(() => res.redirect('/home'))
     .catch(err => next(new Error(err)))
 })
+////////////////////////////////////////////////
+router.post('/api', (req, res) => {
+  // console.log(req.query)
+  console.log(req.body.id)
+
+  const profilefavorite = req.body.id
+  console.log(profilefavorite)
+  User.findByIdAndUpdate(req.user._id, {
+    profilefavorite
+  }, {
+    new: true
+  })
+    .then(x => res.redirect('/profile'))
+    .catch(err => console.log('Error al añadir a favoritos', err))
+})
 
 
 module.exports = router
+
+
+
+
+///tengo que decirle al back que haga un push del favorite
