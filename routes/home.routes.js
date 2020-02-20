@@ -17,7 +17,7 @@ router.get("/", isLogged, (req, res) => {
   const runsPromise = Run.find().populate('owner')
   Promise.all([apiPromise, runsPromise])
     .then(results => {
-      // console.log(results[0].data['@graph'])
+
       const allRuns = {
         runsApi: results[0].data['@graph'],
         runsDB: results[1]
@@ -40,13 +40,13 @@ router.post('/new', (req, res, next) => {
     local
   } = req.body
   Run.create({
-    title,
-    dtstart,
-    dtend,
-    cost,
-    local,
-    owner: owner
-  })
+      title,
+      dtstart,
+      dtend,
+      cost,
+      local,
+      owner: owner
+    })
 
     .then(() => res.redirect('/home'))
     .catch(err => next(new Error(err)))
@@ -55,18 +55,11 @@ router.post('/new', (req, res, next) => {
 //-----------------------------------------
 
 router.post('/api', (req, res) => {
-  console.log(req.user._id)
-  //console.log(req.body.id)
+
   let profilefavorite = req.body.id
   let userupdate = req.user._id
 
-  console.log(userupdate, profilefavorite)
-  // User.findByIdAndUpdate(userupdate, profilefavorite,
-  //   {
-  //     new: true
-  //   })
-  //   .then(x => res.json({ redirect: '/profile' }))
-  //   .catch(err => console.log('Error al añadir a favoritos', err))
+
 })
 
 

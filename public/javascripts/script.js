@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(".info-input").forEach(card => {
         card.onclick = (e) => {
 
-            axios.post('/home/api', { id: e.target.name })
+            axios.post('/home/api', {
+                    id: e.target.name
+                })
                 .then(res => {
                     // if (res.data.redirect) {
                     // window.location.replace(
@@ -18,10 +20,3 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 }, false)
-
-    // function sendEvent() {
-                //     axios.post('/home/api', { id: e.target.name })
-                //         .then((res) => )
-                //         .catch(err => console.log(err))
-
-                // }

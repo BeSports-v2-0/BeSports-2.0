@@ -13,7 +13,7 @@ router.get("/", isLogged, (req, res, ) => {
   api.getAllPolis()
     .then(allPolis => {
       const polisInfo = allPolis.data['@graph']
-      console.log(polisInfo)
+
       res.render("menu/sportcenter", {
         polisInfo
       })
