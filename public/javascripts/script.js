@@ -1,24 +1,29 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
 
     document.querySelectorAll(".info-input").forEach(card => {
         card.onclick = (e) => {
 
             axios.post('/home/api', { id: e.target.name })
-                .then((res) => console.log(res))
+                .then(res => {
+                    // if (res.data.redirect) {
+                    // window.location.replace(
+                    //     `http://localhost:3000${res.data.redirect}`
+                    // );
+                    // }
+                    console.log(res)
+                })
                 .catch(err => console.log(err))
-
         }
+
     })
 
 }, false)
 
-// function sendEvent() {
+    // function sendEvent() {
+                //     axios.post('/home/api', { id: e.target.name })
+                //         .then((res) => )
+                //         .catch(err => console.log(err))
 
-// }
-=======
-    // console.log('HOLAAAAAAAA')
-}, false)
->>>>>>> 0e8c676837fa8aa93dc9f29535d3a4d535b6cad3
+                // }

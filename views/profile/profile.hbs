@@ -1,45 +1,71 @@
-<h1 class="margin-top"> Bienvenido {{user.username}}</h1>
-
-
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="row profile-back">
+        <div class="col-md-6 margin-top">
+            <h1 class="margin-top h1-profile"> Bienvenido {{user.username}}</h1>
+        </div>
+        <div class="col-md-6 margin-top">
             <img src="{{user.profilePicture.path}}"></img>
             <form action="/profile" method="post" enctype="multipart/form-data">
-                <input type="file" name="phototoupload"><br>
-                <input type="submit" value="Save"><br>
+                <input class="profile-botonz" type="file" name="phototoupload"><br>
+                <input class="profile-boton" type="submit" value="Save"><br>
             </form>
 
 
         </div>
-        <div class="col-md-6">
+
+        {{!-- <div class="col-md-6">
             <h2>Gráfica de rendimiento</h2>
-        </div>
-
-
-    </div>
-
-    <div class="container margin-top ">
-        <div class="row ">
-            <div class="col-lg-8">
-                <H2>Estas son las carreras a las que estas apuntad@</H2>
+        </div>  --}}
+        <hr>
+        <div class="container margin-top ">
+            <div class="row ">
+                <div class="col-lg-8">
+                    <h2 class="h2-profile">Estas son las carreras a las que estas apuntad@</H>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <h2>¿Quieres prepararte para conseguir mejores resultados?</h2>
+            {{!-- llamada uno a uno --}}
+            {{!-- <div class="row">
+                <div class="col-md-3">
+                    <p"{{runs.dtstart}}">
+                        </p>
+                        <p"{{runs.local}}">
+                            </p>
+                            <p"{{runs.dtstart}}">
+                                </p>
+                </div>
+            </div> --}}
 
-    <ol id="lista5">
-        <li> <a class="boton"
-                href="https://deporte.uncomo.com/articulo/como-prepararse-para-empezar-con-el-running-5638.html">
-                iniciarse
-                en el Running</a></li>
-        <li><a class="boton" href="https://www.123acorrer.es/Running/entrenamientos/10k-acabar-la-carrera"> Prepararse
-                para 10KM</a></li>
-        <li><a class="boton"
-                href="https://correresdevalientes.elmundo.es/ponte-en-forma/como-pasar-de-una-carrera-de-10-km-a-una-media-maraton">
-                Media maratón</a></li>
-        <li><a class="boton"
-                href="https://www.cmdsport.com/running/entrenamiento-running/las-10-claves-para-preparar-un-maraton/">
-                Maratón</a></li>
-    </ol>
+
+            <hr>
+            <h2 class="h2-profile">¿Quieres prepararte para conseguir mejores resultados?</h2>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-6 margin-toptop">
+                        <ol id="lista5">
+                            <li> <a class="boton"
+                                    href="https://deporte.uncomo.com/articulo/como-prepararse-para-empezar-con-el-running-5638.html">
+                                    iniciarse
+                                    en el Running</a></li>
+                            <li><a class="boton"
+                                    href="https://www.123acorrer.es/Running/entrenamientos/10k-acabar-la-carrera">
+                                    Prepararse
+                                    para 10KM</a></li>
+                            <li><a class="boton"
+                                    href="https://correresdevalientes.elmundo.es/ponte-en-forma/como-pasar-de-una-carrera-de-10-km-a-una-media-maraton">
+                                    Media maratón</a></li>
+                            <li><a class="boton"
+                                    href="https://www.cmdsport.com/running/entrenamiento-running/las-10-claves-para-preparar-un-maraton/">
+                                    Maratón</a></li>
+                        </ol>
+                    </div>
+                    <div class="col-md-6 margin-top margin-bottom">
+                        <video src="/public/video/video.mp4" width=480 height=370 autoplay controls
+                            poster="/public/images/descarga.jpeg">
+                            Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
+                            La versión descargable está disponible en <a
+                                href="https://www.youtube.com/watch?v=yWuu4JQaxek">Enlace</a>.
+                        </video>
+                    </div>
+                </div>
+            </div>

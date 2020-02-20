@@ -51,26 +51,36 @@ router.post('/new', (req, res, next) => {
     .then(() => res.redirect('/home'))
     .catch(err => next(new Error(err)))
 })
-////////////////////////////////////////////////
-router.post('/api', (req, res) => {
-  // console.log(req.query)
-  console.log(req.body.id)
 
-  const profilefavorite = req.body.id
-  console.log(profilefavorite)
-  User.findByIdAndUpdate(req.user._id, {
-    profilefavorite
-  }, {
-    new: true
-  })
-    .then(x => res.redirect('/profile'))
-    .catch(err => console.log('Error al añadir a favoritos', err))
+//-----------------------------------------
+
+router.post('/api', (req, res) => {
+  console.log(req.user._id)
+  //console.log(req.body.id)
+  let profilefavorite = req.body.id
+  let userupdate = req.user._id
+
+  console.log(userupdate, profilefavorite)
+  // User.findByIdAndUpdate(userupdate, profilefavorite,
+  //   {
+  //     new: true
+  //   })
+  //   .then(x => res.json({ redirect: '/profile' }))
+  //   .catch(err => console.log('Error al añadir a favoritos', err))
 })
 
 
 module.exports = router
 
 
+
+
+
+//     .then(x => res.redirect('/profile'))
+//     .catch(err => console.log('Error al añadir a favoritos', err))
+// })
+
+// router.post('/api', (req, res) => {
 
 
 ///tengo que decirle al back que haga un push del favorite

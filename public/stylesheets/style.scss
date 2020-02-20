@@ -150,20 +150,20 @@ label {
 }
 
 .boton {
-  font-size: 15px;
+  font-size: 20px;
   text-decoration: none;
   height: 5px;
   width: 20px;
   margin-left: 40px;
   
-  color: rgb(16, 68, 163);
+  color: rgb(22, 165, 209);
   border-radius: 3px;
 
 }
 
 .boton:hover {
-  font-size: 20px;
-  color: black;
+  font-size: 25px;
+  color:whitesmoke;
   text-decoration: none;
   border: medium;
 }
@@ -190,12 +190,13 @@ label {
 
 #placesMap {
   width: 100%;
-<<<<<<< HEAD
   height: 300px;
 }
 .favorite{
   font-size: 12px;
 }
+
+///////lista profile
 #lista5 {
     counter-reset: li; 
     list-style: none; 
@@ -203,7 +204,7 @@ label {
     font: 15px 'trebuchet MS', 'lucida sans';
     padding: 0;
     margin-bottom: 4em;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-shadow: 0 1px 0 rgba(22, 22, 22, 0.5);
 }
 
 #lista5 ol {
@@ -212,12 +213,10 @@ label {
 
 #lista5 {
     list-style-type: none;
-    list-style-type: decimal ; 
-     
-    margin: 0;  
+    list-style-type: decimal;
+    margin: 0;
     margin-left: 1em;
-    padding: 0;
-     
+    padding: 0; 
     counter-reset: li-counter;
 }
 
@@ -225,7 +224,7 @@ label {
     position: relative;
     margin-bottom: 1.5em;
     padding: 1.5em;
-    background-color: #eaeaea;
+    background-color: #141313;
 }
 
 #lista5 > li:before {
@@ -239,8 +238,8 @@ label {
     line-height: 1.2;
     font-weight: bold;
     text-align: center;
-    color: #464646;
-    background-color: #d0d0d0;
+    color:  rgb(22, 165, 209);
+    background-color: #030202;
      
     transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
@@ -250,7 +249,37 @@ label {
      
     content: counter(li-counter);
     counter-increment: li-counter;
-=======
-  height: 400px;
->>>>>>> 0e8c676837fa8aa93dc9f29535d3a4d535b6cad3
 }
+/////DISEÑO PROFILE
+.h2-profile {
+  
+  color:  rgb(22, 165, 209);
+}
+
+.h1-profile {
+  margin-bottom: 40px;
+  color:rgb(22, 165, 209);
+  font-size: 5em;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.margin-top{
+  margin-top: 35px;
+  
+}
+.margin-toptop{
+  margin-top: 75px;
+  
+}
+.margin-bottom{
+  margin-bottom: 50px;
+}
+ .profile-back{
+   background-color: rgba(160, 160, 160, 0.609);
+ }
+ .profile-boton {
+ 
+   margin-top: 5px;
+
+   
+ }

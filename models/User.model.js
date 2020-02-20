@@ -12,7 +12,7 @@ const userSchema = new Schema({
   },
   favs: [{
     type: Schema.Types.ObjectId,
-    ref: 'Carrers'
+    ref: 'Runs'
   }]
 }, {
   timestamps: {

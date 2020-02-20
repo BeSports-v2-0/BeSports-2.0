@@ -1,0 +1,42 @@
+{{!-- inputs de cada parametro que quiero llevarme --}}
+
+<form action="/views/profile/profile.hbs" method="POST" id="form-container">
+
+
+  <div class="form-group">
+    <label for="idcarrera">ID Carrera</label>
+    <input type="submit" name="idcarrera" value="{{id}}" class="info-input">
+  </div>
+
+  <div class="form-group">
+    <label for="dtstart">Inicio de la carrera</label>
+    <input type="submit" name="dtstart" value="{{dtstart}}" class="info-input">
+  </div>
+
+
+  <div class="form-group">
+    <label for="local">Lugar</label>
+    <input type="submit" name="local" value="{{local}}" class="info-input">
+  </div>
+
+
+  <div class="form-group">
+    <label for="organization">Organizacion</label>
+    <input type="submit" name="organization" value="{{organization.organization-name}}" class="info-input">
+  </div>
+
+  <div class="form-group">
+    <label for="coat">Coste</label>
+    <input type="submit" name="cost" value="{{cost}}" class="info-input">
+  </div>
+
+
+  <div class="form-group">
+    <label for="link">Enlace</label>
+    <input type="submit" name="link" value="{{link}}" class="info-input">
+  </div>
+
+
+  <button class="btn btn-primary">añadir Carrera</button>
+
+</form>
