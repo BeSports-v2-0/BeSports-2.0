@@ -1,11 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Bevan");
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("../images/Sports.png"); }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+/*Backgrounds*/
+.background {
+  background-image: url("../images/back1.png");
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110vh; }
+
+body:before,
+body:after {
+  content: '';
+  background: rgba(64, 51, 173, 0.514);
+  position: fixed;
+  z-index: 100;
+  height: 3px; }
+
+body:before {
+  width: 50%;
+  bottom: 0;
+  right: 0; }
+
+body:after {
+  width: 50%;
+  left: 0;
+  top: 0; }
 
 .img-logotipo {
   height: 150px;
   width: 50%;
-  margin: 50px 0;
+  margin: 65px 0;
   animation: latidos 0.9s ease-in-out infinite; }
 
 .row .signup,
@@ -18,58 +44,24 @@ body {
 .col-md-12 {
   margin: 50px auto; }
 
-nav {
-  background: linear-gradient(150deg, white, #c7c6c6, #4d4d4d, #4d4d4d, #c7c6c6, white);
-  background-size: 400% 300%;
-  animation: BgGradient 5s ease infinite; }
-  nav a {
-    margin-right: 20px;
-    color: blue;
-    font-size: 1.2em; }
-    nav a:hover {
-      text-decoration: none;
-      text-transform: uppercase; }
-
-.error-message {
-  color: red; }
-
-@keyframes BgGradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
 h1 {
   margin-bottom: 40px;
   color: chocolate;
-  font-size: 5em;
+  font-size: 4em;
   margin-left: 30px;
-  margin-top: 30px; }
+  padding-top: 100px; }
 
 h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: chocolate;
-  font-size: 3.5em;
+  font-size: 2.5em;
   margin-left: 30px;
-  margin-top: 30px; }
-
-.margin-top {
-  margin-top: 35px; }
+  padding-top: 100px; }
 
 h3 {
   font-size: 1.9em;
   color: blue;
   padding-top: 20px; }
-
-#randomSentence {
-  color: #efb810;
-  font-size: medium;
-  margin-bottom: 30px;
-  font-style: italic; }
-  #randomSentence:hover {
-    text-decoration: underline; }
 
 h4 {
   color: blue; }
@@ -78,19 +70,45 @@ label {
   font-size: 2em;
   color: blue; }
 
-#map {
-  height: 600px;
-  width: 70%;
-  align-items: center;
-  margin-left: 230px; }
+/*NAV*/
+.navigation {
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 999;
+  transition: all .3s; }
+  .navigation img {
+    height: 35px;
+    margin: 5px 20px; }
+  .navigation ul {
+    text-decoration: none;
+    margin: 0 10px 0 0; }
+  .navigation li {
+    display: inline-block;
+    margin: 0 10px; }
+    .navigation li a {
+      padding: 10px 5px;
+      display: block;
+      color: inherit; }
 
+.navigation.sticky {
+  padding: 0;
+  background: white; }
+
+/*Partial*/
 .card {
-  height: 290px;
+  height: auto;
   margin: 20px 0;
   padding: 10px;
   transition: 0.4s all ease-in; }
   .card:hover {
-    background: #a0a0a0; }
+    background: rgba(156, 71, 135, 0.486);
+    box-shadow: 0px 8px 4px 0px #4f1f4f;
+    transform: translateY(-8px); }
   .card .info-card {
     color: black;
     font-size: 0.8em; }
@@ -102,6 +120,7 @@ label {
   .card li {
     list-style: upper-roman; }
 
+/*RAFA*/
 .boton {
   font-size: 20px;
   text-decoration: none;
@@ -117,6 +136,7 @@ label {
   text-decoration: none;
   border: medium; }
 
+<<<<<<< HEAD
 @keyframes latidos {
   from {
     transform: none; }
@@ -130,6 +150,10 @@ label {
 #placesMap {
   width: 100%;
   height: 300px; }
+=======
+figure {
+  left: 100px; }
+>>>>>>> 44d8c348b8f02968845a196be26f42bfb4334c68
 
 .favorite {
   font-size: 12px; }
@@ -178,7 +202,143 @@ label {
   z-index: 99;
   overflow: hidden;
   content: counter(li-counter);
-  counter-increment: li-counter; }
+  counter-increment: li-counter;
+  height: 400px; }
+
+/*RAFA*/
+/* Underline From Center */
+.underline {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden; }
+  .underline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out; }
+
+.underline:hover:before,
+.underline:focus:before,
+.underline:active:before {
+  left: 0;
+  right: 0; }
+
+/*Random Sentence*/
+#randomSentence {
+  color: #efb810;
+  font-size: medium;
+  margin-bottom: 30px;
+  font-style: italic; }
+  #randomSentence:hover {
+    text-decoration: underline; }
+
+/* Button up  */
+#buttonUp {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px; }
+  #buttonUp:hover {
+    background-color: #555; }
+  #buttonUp .up {
+    width: 20px;
+    height: 20px; }
+
+/*Map Styles*/
+#placesMap {
+  width: 80%;
+  height: 400px;
+  margin: 20px 0;
+  border: 1px solid grey;
+  transition: all 1s ease-in-out; }
+  #placesMap:hover {
+    border: 1px solid yellow;
+    transform: scale(1.1); }
+
+/*Error*/
+.error-message {
+  color: red; }
+
+/*Transitions */
+@keyframes BgGradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes latidos {
+  from {
+    transform: none; }
+  30% {
+    transform: scale(1.4); }
+  60% {
+    transform: scale(1.4); }
+  to {
+    transform: none; } }
+
+.back-error {
+  background: #282828;
+  overflow: hidden;
+  height: 100vh; }
+
+.errorHTTP {
+  font-family: "Bevan", cursive;
+  font-size: 130px;
+  margin: 10vh 0 0;
+  text-align: center;
+  letter-spacing: 5px;
+  background-color: black;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text; }
+  .errorHTTP span {
+    font-size: 1.2em; }
+
+code {
+  color: #bdbdbd;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  margin: 0 30px 25px; }
+  code span {
+    color: #f0c674; }
+  code i {
+    color: #b5bd68; }
+  code em {
+    color: #b294bb;
+    font-style: unset; }
+  code b {
+    color: #81a2be;
+    font-weight: 500; }
+
+.a-error {
+  color: #8abeb7;
+  font-family: monospace;
+  font-size: 20px;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: inline-block; }
 
 .h2-profile {
   color: #16a5d1; }

@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll(".info-input").forEach(card => {

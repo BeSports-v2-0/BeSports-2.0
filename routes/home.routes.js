@@ -17,7 +17,7 @@ router.get("/", isLogged, (req, res) => {
   const runsPromise = Run.find().populate('owner')
   Promise.all([apiPromise, runsPromise])
     .then(results => {
-      console.log(results[0].data['@graph'])
+      // console.log(results[0].data['@graph'])
       const allRuns = {
         runsApi: results[0].data['@graph'],
         runsDB: results[1]

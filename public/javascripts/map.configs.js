@@ -113,27 +113,22 @@ function placePlacesInMap(places) {
           if (status === 'OK') {
             directionsDisplay.setDirections(response)
           } else {
-            window.alert('Directions request failed due to ' + status);
+            alert("No se ha podido trazar una ruta porque una cabra ha roto mi ordenador :(");
           }
         }
       )
 
       directionsDisplay.setMap(myMap)
 
-      setTimeout(() => directionsDisplay.setMap(null), 3000)
+      // setTimeout(() => directionsDisplay.setMap(null), 3000)
     }
 
-    var contentString = `<h1 class="Tiendaname">${place.title}</h1>
-    <p class="ranking">Rating:</p>
-    <p class="Tienda">Open:</p>
-    <p class="Tienda">Close:</p>
-    <p class="ir"></p>`
+    let contentString = `<h1 class="titleMap">${place.title}</h1>
+    <p><a href="#${place.id}"> Ver información del polideportivo</a></p>`
 
     let infowindow = new google.maps.InfoWindow({
       content: contentString
     })
-
-
 
     const icon = {
       url: '../images/mark.png',
@@ -141,7 +136,6 @@ function placePlacesInMap(places) {
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0, 32)
     }
-
     let marker = new google.maps.Marker({
       title: place.title,
       position: center,
@@ -149,10 +143,10 @@ function placePlacesInMap(places) {
       icon: icon,
       animation: google.maps.Animation.DROP
     })
-
     marker.addListener('click', toggleBounce)
     marker.addListener('click', setRoute)
     marker.addListener('click', () => infowindow.open(myMap, marker))
   })
+
 
 }
