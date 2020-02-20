@@ -17,7 +17,7 @@ exports.welcomeMail = (username, email) => {
   transporter.sendMail({
     from: 'BeSports',
     to: email,
-    subject: 'Welcome to myPocket',
+    subject: '¡Bienvenido a BeSports!',
     html: welcomeTemplate({
       username
     })

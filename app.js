@@ -18,9 +18,4 @@ app.use('/profile', require('./routes/profile.routes'))
 app.use('/home', require('./routes/home.routes'))
 app.use('/sportcenter', require('./routes/sportcenter.routes'))
 
-
-
-// app.use('/profile', require('./'))
-
-
 module.exports = app
