@@ -1,5 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: whitesmoke;
 }
 
 .img-logotipo {
@@ -160,8 +161,7 @@ figure {
   background-color: #030202;
 
   transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  -webkit-transform: rotate(-20deg);
+
   z-index: 99;
   overflow: hidden;
 
@@ -224,7 +224,7 @@ figure {
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: #2098D1;
+    background: rgb(20, 88, 119);
     height: 4px;
     transition-property: left, right;
     transition-duration: 0.3s;
@@ -260,13 +260,13 @@ figure {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: grey;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
 
   &:hover {
-    background-color: #555;
+    background-color: rgb(255, 255, 255);
   }
 
   .up {
@@ -281,12 +281,18 @@ figure {
   height: 400px;
   margin: 20px 0;
   border: 1px solid grey;
+
   transition: all 1s ease-in-out;
 
   &:hover {
     border: 1px solid yellow;
     transform: scale(1.1);
   }
+}
+
+.titleMap {
+  color: blue;
+  font-size: 1.5em;
 }
 
 /*Error*/
@@ -332,6 +338,7 @@ figure {
 /*NAV*/
 
 .navigation {
+  color: white;
   border-bottom: 1px solid rgb(230, 230, 230);
   display: flex;
   justify-content: space-between;
@@ -367,6 +374,7 @@ figure {
 .navigation.sticky {
   padding: 0;
   background: white;
+  color: rgb(82, 82, 82);
 }
 
 .navigation img {
@@ -391,12 +399,220 @@ figure {
 }
 
 /*Backgrounds*/
-.background {
-  background-image: url('../images/back1.png');
-  background-color: grey;
-  background-repeat: no-repeat;
+.background-index {
+  background-image: linear-gradient(135deg, rgba(30, 29, 31, 0.200) 0%, rgba(64, 159, 223, 0.200) 100%),
+    url('../images/back4.png');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
+
+  a {
+    width: 100%;
+    height: 48px;
+    padding: 10px 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    background-color: #313787;
+    border: 1px #313787 solid;
+    opacity: 1;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .5s ease-in;
+
+    &:hover {
+      background-color: #40a5df;
+      border: 1px #40a5df solid;
+      border-radius: 20%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.background {
+  background: rgba(30, 29, 31, 1);
+  background: linear-gradient(135deg, rgba(30, 29, 31, 1) 0%, rgb(64, 159, 223) 100%);
+  height: 100vh;
+
+  h2,
+  h3 {
+    font-size: 16px;
+    letter-spacing: -1px;
+    line-height: 20px;
+  }
+
+  h2 {
+    color: #747474;
+    text-align: center;
+  }
+
+  h3 {
+    color: #032942;
+    text-align: right;
+  }
+
+  .i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .i-login {
+    margin: 13px 0px 0px 15px;
+    position: relative;
+    float: left;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDQxNi4yMjkgNDE2LjIyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDE2LjIyOSA0MTYuMjI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQwMy43MjksMjkuNjVINzEuODAyYy02LjkwMywwLTEyLjUsNS41OTctMTIuNSwxMi41djg2LjM2M2MwLDYuOTAzLDUuNTk3LDEyLjUsMTIuNSwxMi41czEyLjUtNS41OTcsMTIuNS0xMi41VjU0LjY1ICAgIGgzMDYuOTI3djMwNi45MjhIODQuMzAydi03My44NjFjMC02LjkwMy01LjU5Ny0xMi41LTEyLjUtMTIuNXMtMTIuNSw1LjU5Ny0xMi41LDEyLjV2ODYuMzYxYzAsNi45MDMsNS41OTcsMTIuNSwxMi41LDEyLjUgICAgaDMzMS45MjdjNi45MDIsMCwxMi41LTUuNTk3LDEyLjUtMTIuNVY0Mi4xNUM0MTYuMjI5LDM1LjI0Nyw0MTAuNjMxLDI5LjY1LDQwMy43MjksMjkuNjV6IiBmaWxsPSIjODczMTRlIi8+CgkJPHBhdGggZD0iTTE4NS40MTcsMjg3LjgxMWMwLDUuMDU3LDMuMDQ1LDkuNjEzLDcuNzE2LDExLjU1YzEuNTQ3LDAuNjQyLDMuMTcsMC45NSw0Ljc4MSwwLjk1YzMuMjUzLDAsNi40NTEtMS4yNyw4Ljg0Mi0zLjY2ICAgIGw3OS42OTctNzkuNjk3YzIuMzQ0LTIuMzQ0LDMuNjYtNS41MjMsMy42Ni04LjgzOWMwLTMuMzE2LTEuMzE2LTYuNDk1LTMuNjYtOC44MzlsLTc5LjY5Ny03OS42OTcgICAgYy0zLjU3NS0zLjU3NS04Ljk1MS00LjY0Ni0xMy42MjMtMi43MWMtNC42NzEsMS45MzYtNy43MTYsNi40OTMtNy43MTYsMTEuNTQ5djY3LjE5N0gxMi41Yy02LjkwMywwLTEyLjUsNS41OTctMTIuNSwxMi41ICAgIGMwLDYuOTAzLDUuNTk3LDEyLjUsMTIuNSwxMi41aDE3Mi45MTdWMjg3LjgxMUwxODUuNDE3LDI4Ny44MTF6IE0yMTAuNDE3LDE1OC41OTRsNDkuNTIxLDQ5LjUybC00OS41MjEsNDkuNTIxVjE1OC41OTR6IiBmaWxsPSIjODczMTRlIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  .box {
+    width: 330px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .box-form {
+    width: 320px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .box-login-tab {
+    width: 50%;
+    height: 40px;
+    background: #fdfdfd;
+    position: relative;
+    float: left;
+    z-index: 1;
+
+    border-radius: 6px 6px 0 0;
+
+    transform: perspective(5px) rotateX(0.93deg) translateZ(-1px);
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+
+    box-shadow: 15px -15px 30px rgba(0, 0, 0, 0.32);
+  }
+
+  .box-login-title {
+    width: 35%;
+    height: 40px;
+    position: absolute;
+    float: left;
+    z-index: 2;
+  }
+
+  .box-login {
+    position: relative;
+    top: -4px;
+    width: 320px;
+    background: #fdfdfd;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+
+    box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+
+
+  .fieldset-body p {
+    width: 100%;
+    display: inline-table;
+    padding: 5px 20px;
+    margin-bottom: 2px;
+  }
+
+  label {
+    float: left;
+    width: 100%;
+    top: 0px;
+    color: #032942;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  input[type=text],
+  input[type=password],
+  input[type=email] {
+    width: 100%;
+    height: 32px;
+    padding: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border: none;
+    display: inline;
+    color: #303030;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.05), 1px 1px 0px rgba(255, 255, 255, 1);
+
+    &:focus {
+      background-color: #f5f5d4;
+      outline: none;
+    }
+  }
+
+  input[type=submit] {
+    width: 100%;
+    height: 48px;
+    margin-top: 24px;
+    padding: 0px 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    background-color: #313787;
+    border: 1px #313787 solid;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .5s ease-in;
+
+    &:hover {
+      background-color: #40a5df;
+      border: 1px #40a5df solid;
+    }
+
+    &:focus {
+      outline: none;
+
+    }
+  }
+
+  p.field span.i {
+    width: 24px;
+    height: 24px;
+    float: right;
+    position: relative;
+    margin-top: -26px;
+    right: 2px;
+    z-index: 2;
+    display: none;
+
+  }
 }
 
 body:before,
@@ -422,7 +638,7 @@ body:after {
 
 // Back error
 .back-error {
-  background: rgb(40, 40, 40);
+  background: linear-gradient(135deg, rgba(30, 29, 31, 1) 0%, rgb(64, 159, 223) 100%);
   overflow: hidden;
   height: 100vh;
 }
@@ -480,23 +696,6 @@ code {
   display: inline-block
 }
 
-// Login y sign in
-.h1-log-sig {
-  text-align: center;
-  font-size: 2.5em;
-  padding-top: 90px;
-  text-transform: uppercase;
-  color: #4646e2;
-
-  span {
-    background-color: #ffffff79;
-    border-radius: 20%;
-  }
-}
-
-.margin-top {
-  margin-top: 80px;
-}
 
 input {
   opacity: 0.8;
@@ -535,8 +734,46 @@ form {
 //End login and sign in
 
 // polideportivos
-.h1-centers {
-  padding-top: 90px;
+.background-center {
+  background: linear-gradient(135deg, rgba(30, 29, 31, 1) 0%, rgb(64, 159, 223) 100%);
+  color: white;
+
+  .h1-centers {
+    padding-top: 90px;
+    margin-left: 40px;
+    font-size: 4em;
+    margin-bottom: 40px;
+  }
+
+  .h2-centers {
+    margin-right: 40px;
+    font-size: 2.5em;
+  }
+
+  .toggle {
+    color: white;
+    margin-top: 15px;
+
+    &:hover {
+      cursor: pointer;
+      color: green;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    color: black;
+    line-height: 20px;
+  }
+
+  h3 {
+    font-size: 2em;
+    color: black;
+  }
+}
+
+.flex {
+  display: flex;
 }
 
 /*Transitions */

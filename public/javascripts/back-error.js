@@ -6,8 +6,7 @@ const fun = (num, time) => {
   setTimeout(() => {
     let interval = setInterval(() => {
       i++
-      document.getElementsByTagName("code")[num].innerHTML =
-        str.slice(0, i) + "|"
+      document.getElementsByTagName("code")[num].innerHTML = str.slice(0, i) + "|"
       if (i == str.length) {
         clearInterval(interval)
         document.getElementsByTagName("code")[num].innerHTML = str

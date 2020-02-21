@@ -18,5 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     })
-
+    document.querySelectorAll('.toggle').forEach((button, id) => button.onclick = () => document.querySelectorAll('.collapse')[id].classList.toggle('show'))
 }, false)
