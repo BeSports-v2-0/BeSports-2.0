@@ -1,22 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     document.querySelectorAll(".info-input").forEach(card => {
         card.onclick = (e) => {
-
-            axios.post('/home/api', {
-                    id: e.target.name
-                })
+            axios.post('/home/api', { id: e.target.name })
                 .then(res => {
-                    // if (res.data.redirect) {
-                    // window.location.replace(
-                    //     `http://localhost:3000${res.data.redirect}`
-                    // );
-                    // }
                     console.log(res)
                 })
                 .catch(err => console.log(err))
         }
-
     })
     document.querySelectorAll('.toggle').forEach((button, id) => button.onclick = () => document.querySelectorAll('.collapse')[id].classList.toggle('show'))
 }, false)
