@@ -11,8 +11,7 @@ const userSchema = new Schema({
     path: String
   },
   favs: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Runs'
+    type: Schema.Types.ObjectId, ref: 'Runs'
   }]
 }, {
   timestamps: {

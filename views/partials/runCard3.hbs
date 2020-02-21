@@ -1,16 +1,14 @@
-<div class="col-md-4">
+<div class="col-12">
   <div class="card">
-    <h3>{{title}}</h3>
+    <h3 class="h3-profile">{{title}}</h3>
     <div class="info-card">
       <form action="/home/profile" method="POST" id="form-container">
+        {{#if local}}
         <div class="form-group">
           <label for="title" class="laberprofile">Nombre de la carrera</label>
           <input type="text" name="title" value="{{title}}" class="inputprofile">
         </div>
-        <div class="form-group">
-          <label for="idcarrera" class="laberprofile">ID Carrera</label>
-          <input type="text" name="idcarrera" value="{{id}}" class="inputprofile">
-        </div>
+        {{/if}}
         {{#if dtstart}}
         <div class="form-group">
           <label for="dtstart" class="laberprofile">Inicio de la carrera</label>
@@ -37,21 +35,16 @@
         {{/if}}
         {{#if cost}}
         <div class="form-group">
-          <label for="coat" class="laberprofile">Coste</label>
+          <label for="cost" class="laberprofile">Coste</label>
           <input type="text" name="cost" value="{{cost}}" class="inputprofile">
         </div>
         {{/if}}
-
         {{#if link}}
         <div class="form-group">
           <label for="link" class="laberprofile">Enlace</label>
           <input type="text" name="link" value="{{link}}" class="inputprofile">
         </div>
         {{/if}}
-
-
-        <button class="btn btn-primary">añadir Carrera</button>
-
       </form>
     </div>
   </div>

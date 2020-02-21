@@ -131,38 +131,17 @@ label {
   padding: 0;
   background: white;
 }
-
-// .navigation img {
-//   height: 35px;
-//   margin: 5px 25px;
-// }
-
-// .navigation ul {
-//   text-decoration: none;
-//   margin: 0 10px 0 0;
-// }
-
-// .navigation li {
-//   display: inline-block;
-//   margin: 0 10px;
-// }
-
-// .navigation li a {
-//   padding: 10px 5px;
-//   display: block;
-//   color: inherit;
-// }
-
-/*Partial*/
 .card {
   height: auto;
   margin: 20px 0;
   padding: 10px;
   transition: 0.4s all ease-in;
+  background:  rgb(100, 98, 98);
+  box-shadow: 0px 8px 4px 0px rgb(21, 22, 22);
 
   &:hover {
-    background: rgba(156, 71, 135, 0.486);
-    box-shadow: 0px 8px 4px 0px rgba(79, 31, 79, 1);
+    background: rgb(128, 126, 126);
+    box-shadow: 0px 10px 7px 0px rgb(21, 22, 22);
     transform: translateY(-8px);
   }
 
@@ -172,7 +151,7 @@ label {
   }
 
   a {
-    color: purple;
+    color: rgb(22, 115, 177);
 
     &:hover {
       text-decoration: none;
@@ -261,6 +240,7 @@ figure {
   text-align: center;
   color: #464646;
   background-color: #d0d0d0;
+  
 
   transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
@@ -415,6 +395,7 @@ figure {
     padding: 0;
     margin-bottom: 4em;
     text-shadow: 0 1px 0 rgba(22, 22, 22, 0.5);
+    
 
 }
 
@@ -422,6 +403,7 @@ figure {
   background: rgb(40, 40, 40);
   overflow: hidden;
   height: 100vh;
+  
 }
 
 .errorHTTP {
@@ -483,8 +465,9 @@ figure {
 }
 /////DISEÑO PROFILE
 .h2-profile {
-  
-  color:  rgb(22, 165, 209);
+  text-align: center;
+  color:  rgb(16, 17, 17);
+  font-size: 300;
 }
 
 .h1-profile {
@@ -506,7 +489,7 @@ figure {
   margin-bottom: 50px;
 }
  .profile-back{
-   background-color: rgba(160, 160, 160, 0.609);
+   background-color:     linear-gradient(135deg, rgba(30, 29, 31, 1) 0%, rgb(64, 159, 223) 100%);
  }
  .profile-boton {
  
@@ -514,6 +497,7 @@ figure {
 
    
  }
+
 code {
   color: #bdbdbd;
   text-align: center;
@@ -551,4 +535,21 @@ code {
 }
 
 
+
+.inputprofile{
+  border: 0;
+  background-color: rgba($color: #000000, $alpha: 0.0);
+  outline: none;
+}
+.laberprofile{
+  color:black;
+  font-size: 30px;
+
+}
+.h3-profile{
+  font-size: 25px;
+}
+.back-color{
+  background:  linear-gradient(135deg, rgba(30, 29, 31, 1) 0%, rgb(64, 159, 223) 100%)
+}
 @import url("https://fonts.googleapis.com/css?family=Bevan")
