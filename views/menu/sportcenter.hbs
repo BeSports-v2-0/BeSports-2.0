@@ -1,23 +1,35 @@
-<h1 class="underline">Polideportivos de Madrid</h1>
-<div class="container justify-content-center">
+<div class="background-center">
+  <h1 class="h1-centers underline">Polideportivos de Madrid</h1>
 
-  {{#each polisInfo}}
-  <h2 id="{{id}}">{{title}}</h2>
-  <h3>Dirección</h3>
-  <p>{{address.street-address}}, {{address.street-address.postal-code}} {{address.locality}}</p>
-  <h3>Servicios</h3>
-  <p>{{organization.services}}</p>
-  <h3>Horarios</h3>
-  <p>{{organization.schedule}}</p>
-  <h3>Cómo llegar</h3>
-  <p>{{organization.organization-desc}}</p>
-  <hr>
-  {{/each}}
+  <div class="container">
 
-  <figure id="placesMap"></figure>
+    {{#each polisInfo}}
+    <div class="flex">
+      <h2 class="h2-centers">{{title}}</h2>
+      <p id="{{id}}" class="toggle" href="">[Mostrar información]</p>
+
+    </div>
+    <div class="collapse">
+      <div class="card">
+        <h3>Dirección</h3>
+        <p>{{address.street-address}}, {{address.street-address.postal-code}} {{address.locality}}</p>
+        <h3>Servicios</h3>
+        <p>{{organization.services}}</p>
+        <h3>Horarios</h3>
+        <p>{{organization.schedule}}</p>
+        <h3>Cómo llegar</h3>
+        <p>{{organization.organization-desc}}</p>
+      </div>
+    </div>
+
+    <hr>
+    {{/each}}
+
+    <figure id="placesMap"></figure>
+  </div>
+  {{!-- Buscar boton para ir arriba --}}
+  <button id="buttonUp" class="myBtn"><img class="up" src="../../images/up.png" alt="up arrow"></button>
 </div>
-{{!-- Buscar boton para ir arriba --}}
-<button id="buttonUp" class="myBtn"><img class="up" src="../../images/up.png" alt="up arrow"></button>
 
 <script src="/javascripts/goUp.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(err => console.log(err))
         }
     })
+    document.querySelectorAll('.toggle').forEach((button, id) => button.onclick = () => document.querySelectorAll('.collapse')[id].classList.toggle('show'))
 }, false)
-
