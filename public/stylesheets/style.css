@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Bevan");
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -18,6 +19,29 @@ body {
 
 .col-md-12 {
   margin: 50px auto; }
+
+.card {
+  height: auto;
+  margin: 20px 0;
+  padding: 10px;
+  transition: 0.4s all ease-in;
+  background: #646262;
+  box-shadow: 0px 8px 4px 0px #151616; }
+  .card:hover {
+    background: #807e7e;
+    box-shadow: 0px 10px 7px 0px #151616;
+    transform: translateY(-8px); }
+  .card .info-card {
+    color: black;
+    font-size: 0.8em;
+    width: 100%; }
+  .card a {
+    color: #1673b1; }
+    .card a:hover {
+      text-decoration: none;
+      text-transform: uppercase; }
+  .card li {
+    list-style: upper-roman; }
 
 /*RAFA*/
 .boton {
@@ -41,61 +65,12 @@ figure {
 .favorite {
   font-size: 12px; }
 
+/*RAFA*/
 #lista5 {
   counter-reset: li;
   list-style: none;
   *list-style: decimal;
-  font: 15px 'trebuchet MS', 'lucida sans';
-  padding: 0;
-  margin-bottom: 4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
-
-#lista5 ol {
-  margin: 0 0 0 2em; }
-
-#lista5 {
-  list-style-type: none;
-  list-style-type: decimal;
-  margin: 0;
-  margin-left: 1em;
-  padding: 0;
-  counter-reset: li-counter; }
-
-#lista5 > li {
-  position: relative;
-  margin-bottom: 1.5em;
-  padding: 1.5em;
-  background-color: #eaeaea; }
-
-#lista5 > li:before {
-  position: absolute;
-  top: -0.3em;
-  left: -0.5em;
-  width: 1.8em;
-  height: 1.2em;
-  font-size: 2em;
-  line-height: 1.2;
-  font-weight: bold;
-  text-align: center;
-  color: #464646;
-  background-color: #d0d0d0;
-  transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  -webkit-transform: rotate(-20deg);
-  z-index: 99;
-  overflow: hidden;
-  content: counter(li-counter);
-  counter-increment: li-counter;
-  height: 400px; }
-
-.favorite {
-  font-size: 12px; }
-
-#lista5 {
-  counter-reset: li;
-  list-style: none;
-  *list-style: decimal;
-  font: 15px 'trebuchet MS', 'lucida sans';
+  font: 15px ‘trebuchet MS’, ‘lucida sans’;
   padding: 0;
   margin-bottom: 4em;
   text-shadow: 0 1px 0 rgba(22, 22, 22, 0.5); }
@@ -127,20 +102,24 @@ figure {
   color: #16a5d1;
   background-color: #030202;
   transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
   z-index: 99;
   overflow: hidden;
   content: counter(li-counter);
   counter-increment: li-counter; }
 
 .h2-profile {
-  color: #16a5d1; }
+  text-align: center;
+  color: #101111;
+  font-size: 300; }
 
 .h1-profile {
   margin-bottom: 40px;
   color: #16a5d1;
   font-size: 5em;
   margin-left: 30px;
-  margin-top: 30px; }
+  padding-top: 100px; }
 
 .margin-top {
   margin-top: 35px; }
@@ -152,12 +131,27 @@ figure {
   margin-bottom: 50px; }
 
 .profile-back {
-  background-color: rgba(160, 160, 160, 0.609); }
+  background-color: linear-gradient(135deg, #1e1d1f 0%, #409fdf 100%); }
 
 .profile-boton {
   margin-top: 5px; }
 
-/*RAFA END*/
+.inputprofile {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none; }
+
+.laberprofile {
+  color: black;
+  font-size: 30px;
+  width: 100%; }
+
+.h3-profile {
+  font-size: 25px; }
+
+.back-color {
+  background: linear-gradient(135deg, #1e1d1f 0%, #409fdf 100%); }
+
 /* Underline From Center */
 .underline {
   display: inline-block;
@@ -233,26 +227,6 @@ figure {
   color: red; }
 
 /*Partial*/
-.card {
-  height: auto;
-  margin: 20px 0;
-  padding: 10px;
-  transition: 0.4s all ease-in; }
-  .card:hover {
-    background: rgba(156, 71, 135, 0.486);
-    box-shadow: 0px 8px 4px 0px #4f1f4f;
-    transform: translateY(-8px); }
-  .card .info-card {
-    color: black;
-    font-size: 0.8em; }
-  .card a {
-    color: purple; }
-    .card a:hover {
-      text-decoration: none;
-      text-transform: uppercase; }
-  .card li {
-    list-style: upper-roman; }
-
 /*NAV*/
 .navigation {
   color: white;
@@ -594,8 +568,5 @@ form {
     transform: scale(1.4); }
   to {
     transform: none; } }
-
-h2 {
-  color: red; }
 
 /*# sourceMappingURL=style.css.map */
