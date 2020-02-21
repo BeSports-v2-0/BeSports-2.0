@@ -206,8 +206,7 @@ figure {
   background-color: grey;
   cursor: pointer;
   padding: 15px;
-  border-radius: 10px;
-  transition: all .5 ease-in; }
+  border-radius: 10px; }
   #buttonUp:hover {
     background-color: white; }
   #buttonUp .up {
