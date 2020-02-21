@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Bevan");
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: whitesmoke; }
@@ -727,5 +726,7 @@ figure {
 
 h1 {
   color: blue; }
+  h1 h2 {
+    color: red; }
 
 /*# sourceMappingURL=style.css.map */
