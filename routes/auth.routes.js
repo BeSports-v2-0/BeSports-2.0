@@ -15,7 +15,7 @@ router.get("/login", (req, res, next) => {
 })
 
 router.post("/login", passport.authenticate("local", {
-  successRedirect: "/",
+  successRedirect: "/profile",
   failureRedirect: "/auth/login",
   failureFlash: true,
   passReqToCallback: true
@@ -86,7 +86,7 @@ router.post("/signup", (req, res, next) => {
     newUser.save()
       .then(() => {
         sendMail(req.body.username, req.body.email)
-        res.redirect("/")
+        res.redirect("/auth/login")
       })
       .catch(err => {
         res.render("auth/signup", {

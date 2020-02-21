@@ -25,10 +25,11 @@ body {
   margin: 20px 0;
   padding: 10px;
   transition: 0.4s all ease-in;
-  background: #646262;
+  background: #156492;
   box-shadow: 0px 8px 4px 0px #151616; }
   .card:hover {
-    background: #807e7e;
+    color: white;
+    background: #0b3750;
     box-shadow: 0px 10px 7px 0px #151616;
     transform: translateY(-8px); }
   .card .info-card {
@@ -541,7 +542,7 @@ form {
       color: green;
       text-transform: uppercase; }
   .background-center p {
-    color: black;
+    color: white;
     line-height: 20px; }
   .background-center h3 {
     font-size: 2em;
