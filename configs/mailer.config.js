@@ -27,6 +27,4 @@ exports.welcomeMail = (username, email) => {
     console.log(error)
     throw error
   })
-
-
 }
