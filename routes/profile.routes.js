@@ -34,5 +34,6 @@ router.post("/", uploadCloud.single("phototoupload"), (req, res, next) => {
     .then((x) => res.redirect("/profile"))
     .catch((err) => console.log("error con la foto", err));
 });
+//changes
 
 module.exports = router;
